@@ -5,7 +5,7 @@ let editingTransactionId = null;
 let deleteTransactionId = null;
 
 // API Configuration
-const API_BASE_URL = 'http://localhost:5000/api';
+const API_BASE_URL = 'https://finapt-back.onrender.com/api';
 
 // Categories configuration
 const CATEGORIES = {

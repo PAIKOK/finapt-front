@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // API base URL
-const API_BASE_URL = 'http://localhost:5000/api';
+const API_BASE_URL = 'https://finapt-back.onrender.com/api';
 
 // Get auth headers
 function getAuthHeaders() {

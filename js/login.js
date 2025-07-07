@@ -1,5 +1,5 @@
 // API base URL - change this to your backend URL
-const API_BASE_URL = 'http://localhost:5000/api';
+const API_BASE_URL = 'https://finapt-back.onrender.com/api';
 
 // DOM elements
 const loginForm = document.getElementById('loginForm');
