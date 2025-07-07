@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investments - FinAPT</title>
+    <link rel="stylesheet" href="css/investments.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <h2>FinAPT</h2>
+            </div>
+            <div class="nav-middle">
+                <a href="dashboard.html" class="nav-link">Dashboard</a>
+                <a href="transactions.html" class="nav-link">Transactions</a>
+                <a href="investments.html" class="nav-link active">Investments</a>
+            </div>
+            <div class="nav-right">
+                <a href="login.html" class="nav-link logout">Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="container">
+            <header class="page-header">
+                <h1>Investment Recommendations</h1>
+                <p>Get personalized investment suggestions based on your financial profile</p>
+            </header>
+
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <p>Analyzing your financial data...</p>
+            </div>
+
+            <div class="error-message" id="errorMessage" style="display: none;">
+                <p>Unable to fetch investment data. Please try again.</p>
+                <button onclick="fetchInvestmentData()" class="retry-btn">Retry</button>
+            </div>
+
+            <div class="investment-content" id="investmentContent" style="display: none;">
+                <div class="balance-card">
+                    <h2>Your Financial Overview</h2>
+                    <div class="balance-info">
+                        <div class="balance-amount">
+                            <span class="balance-label">Current Balance</span>
+                            <span class="balance-value" id="balanceAmount">₹0</span>
+                        </div>
+                        <div class="risk-level">
+                            <span class="risk-label">Risk Profile</span>
+                            <span class="risk-badge" id="riskBadge">-</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="suggestions-section">
+                    <h2>Recommended Investment Strategies</h2>
+                    <div class="suggestions-grid" id="suggestionsGrid">
+                        <!-- Suggestions will be populated here -->
+                    </div>
+                </div>
+
+                <div class="investment-tips">
+                    <h3>General Investment Tips</h3>
+                    <div class="tips-grid">
+                        <div class="tip-card">
+                            <div class="tip-icon">📊</div>
+                            <h4>Diversify Your Portfolio</h4>
+                            <p>Don't put all your eggs in one basket. Spread investments across different asset classes.
+                            </p>
+                        </div>
+                        <div class="tip-card">
+                            <div class="tip-icon">⏰</div>
+                            <h4>Start Early</h4>
+                            <p>Time in the market beats timing the market. The power of compounding works best over
+                                time.</p>
+                        </div>
+                        <div class="tip-card">
+                            <div class="tip-icon">🎯</div>
+                            <h4>Set Clear Goals</h4>
+                            <p>Define your financial goals and investment timeline to make informed decisions.</p>
+                        </div>
+                        <div class="tip-card">
+                            <div class="tip-icon">📚</div>
+                            <h4>Keep Learning</h4>
+                            <p>Stay informed about market trends and continuously educate yourself about investments.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/investments.js"></script>
+</body>
+
+</html>

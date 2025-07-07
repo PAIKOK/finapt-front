@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - FinApt</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-left">
+            <h2 class="logo">FinApt</h2>
+        </div>
+        <div class="nav-middle">
+            <ul class="nav-links">
+                <li><a href="dashboard.html" class="nav-link active">Dashboard</a></li>
+                <li><a href="transactions.html" class="nav-link">Transactions</a></li>
+                <li><a href="investments.html" class="nav-link">Investments</a></li>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <button class="logout-btn" onclick="logout()">
+                <i class="fas fa-sign-out-alt"></i> Logout
+            </button>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        <div class="dashboard-header">
+            <h1>Welcome to your Dashboard</h1>
+            <p id="current-date"></p>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card income">
+                <div class="stat-icon">
+                    <i class="fas fa-arrow-up"></i>
+                </div>
+                <div class="stat-content">
+                    <h3>Total Income</h3>
+                    <p class="stat-value" id="total-income">₹0.00</p>
+                </div>
+            </div>
+
+            <div class="stat-card expense">
+                <div class="stat-icon">
+                    <i class="fas fa-arrow-down"></i>
+                </div>
+                <div class="stat-content">
+                    <h3>Total Expense</h3>
+                    <p class="stat-value" id="total-expense">₹0.00</p>
+                </div>
+            </div>
+
+            <div class="stat-card balance">
+                <div class="stat-icon">
+                    <i class="fas fa-wallet"></i>
+                </div>
+                <div class="stat-content">
+                    <h3>Current Balance</h3>
+                    <p class="stat-value" id="current-balance">₹0.00</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="dashboard-content">
+            <div class="chart-section">
+                <div class="chart-container">
+                    <h3>Monthly Trends</h3>
+                    <canvas id="trendsChart"></canvas>
+                </div>
+
+                <div class="chart-container">
+                    <h3>Category Breakdown</h3>
+                    <canvas id="categoryChart"></canvas>
+                </div>
+            </div>
+
+            <div class="recent-transactions">
+                <h3>Recent Transactions</h3>
+                <div class="transactions-list" id="recent-transactions">
+                    <!-- Recent transactions will be loaded here -->
+                </div>
+                <div class="view-all">
+                    <a href="transactions.html" class="btn-link">View All Transactions</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+
+</html>
