@@ -59,8 +59,10 @@ loginForm.addEventListener('submit', async (e) => {
             headers: {
                 'Content-Type': 'application/json',
             },
+            credentials: 'include', // ✅ Add this line
             body: JSON.stringify(data)
         });
+
 
         const result = await response.json();
 
